@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface"
+    android:padding="4dp">
+
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="casual"
+        android:gravity="bottom|end"
+        android:paddingLeft="12dp"
+        android:paddingTop="20dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="0dp"
+        android:text="0"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/modeIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:fontFamily="casual"
+        android:gravity="end"
+        android:paddingEnd="24dp"
+        android:text="DEG"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="18sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3,4,5,6">
+
+        <TableRow android:layout_height="50dp">
+
+            <Button
+                style="@style/CalcBtn.Operator"
+                android:fontFamily="casual"
+                android:onClick="onBtnClick"
+                android:text="sin"
+                android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="cos" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="tan" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="AC" android:onClick="onClear" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="⌫" android:onClick="onDelete" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="!" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Orange" android:text="/" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:layout_height="50dp">
+            <Button style="@style/CalcBtn.Operator" android:text="ln" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="log" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="sqrt" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="7" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="8" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="9" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Orange" android:text="*" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:layout_height="50dp">
+            <Button style="@style/CalcBtn.Operator" android:text="pi" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="e" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="^" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="4" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="5" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="6" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Orange" android:text="-" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:layout_height="50dp">
+            <Button style="@style/CalcBtn.Operator" android:text="(" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text=")" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="%" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="1" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="2" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="3" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Orange" android:text="+" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:layout_height="50dp">
+            <Button style="@style/CalcBtn.Operator" android:text="exp" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="deg" android:onClick="onModeClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Operator" android:text="rad" android:onClick="onModeClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="0" android:layout_span="2" android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn" android:text="." android:onClick="onBtnClick" android:fontFamily="casual" android:textStyle="bold" />
+            <Button style="@style/CalcBtn.Orange" android:text="=" android:onClick="onEqual" android:fontFamily="casual" android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
